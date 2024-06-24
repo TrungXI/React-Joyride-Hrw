@@ -50,6 +50,7 @@ function JoyrideTooltipContainer(props: TooltipRenderProps) {
   if (output.primary) {
     output.primary = (
       <button
+        id="react-joy-button-primary-tour"
         data-test-id="button-primary"
         style={styles.buttonNext}
         type="button"
@@ -63,6 +64,7 @@ function JoyrideTooltipContainer(props: TooltipRenderProps) {
   if (showSkipButton && !isLastStep) {
     output.skip = (
       <button
+        id="react-joy-button-skip-tour"
         aria-live="off"
         data-test-id="button-skip"
         style={styles.buttonSkip}
@@ -76,7 +78,7 @@ function JoyrideTooltipContainer(props: TooltipRenderProps) {
 
   if (!hideBackButton && index > 0) {
     output.back = (
-      <button data-test-id="button-back" style={styles.buttonBack} type="button" {...backProps}>
+      <button id="react-joy-button-back-tour" data-test-id="button-back" style={styles.buttonBack} type="button" {...backProps}>
         {back}
       </button>
     );
